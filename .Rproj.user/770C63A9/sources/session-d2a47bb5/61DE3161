@@ -1,0 +1,26 @@
+{
+    "id": "61DE3161",
+    "path": "~/Studies/UspEsalq/Tcc/projeto/pesquisa/public/1-init.R",
+    "project_path": "1-init.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1720886334357.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "2,6",
+        "scrollLine": "0"
+    },
+    "folds": "7|13|27|0|\n30|13|55|0|\n58|13|204|0|\n207|19|392|0|\n216|26|265|0|\n267|31|271|0|\n273|31|278|0|\n280|41|391|0|\n",
+    "lastKnownWriteTime": 1720909660,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1720909660247,
+    "read_only": false,
+    "read_only_alternatives": []
+}
