@@ -9,7 +9,7 @@
 # Group C |       T           |       T         |       F
 # Group X*|       T           |       F         |       F
 #
-# * Actually Group "X" doesn't exist. That is the case with only sensors
+# * Actually Group "X" doesn't exist. That is the scenario with only sensors
 
 # set group here
 GROUP <- 'C'
@@ -23,7 +23,7 @@ if(GROUP == 'B'){
   USE_SENSOR_DATA <-F
   LOAD_KEYBOARD_FIXED <- F  
 }
-if(GROUP == 'C'){
+if(GROUP == 'C' || GROUP == 'X'){
   USE_SENSOR_DATA <-T
   LOAD_KEYBOARD_FIXED <- F  
 }
@@ -631,9 +631,12 @@ for (pc_train in percents){
       info.sensor.perc <- info.gaing["cols_perc"]$cols_perc
       
       sensors.stats <- sensors.stats[info.sensor.cols]
-      #TODO
-      keyboard.stats <- bind_cols(keyboard.stats, sensors.stats)
-      #keyboard.stats <- bind_cols(keyboard.stats["user_id"], sensors.stats)
+      if (GROUP != 'X'){
+        keyboard.stats <- bind_cols(keyboard.stats, sensors.stats)
+      } else {
+        keyboard.stats <- bind_cols(keyboard.stats["user_id"], sensors.stats)
+      }
+      
       
       info.cols <- c(info.cols, info.sensor.cols)
       info.perc <-c(info.perc, info.sensor.perc)
